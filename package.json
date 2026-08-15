@@ -3,16 +3,46 @@
   "version": "1.0.0",
   "main": "index.js",
   "dependencies": {
-    "expo": "~57.0.12",
+    "@expo-google-fonts/baloo-2": "^0.4.2",
+    "@expo-google-fonts/nunito": "^0.4.2",
+    "@expo-google-fonts/patrick-hand": "^0.4.1",
+    "@expo/metro-runtime": "~57.0.10",
+    "@react-native-async-storage/async-storage": "2.2.0",
+    "@supabase/functions-js": "^2.112.3",
+    "@supabase/supabase-js": "^2.112.3",
+    "expo": "~57.0.13",
+    "expo-asset": "~57.0.11",
+    "expo-audio": "~57.0.3",
+    "expo-crypto": "~57.0.1",
+    "expo-font": "~57.0.1",
+    "expo-haptics": "~57.0.1",
+    "expo-secure-store": "~57.0.1",
+    "expo-splash-screen": "~57.0.6",
     "expo-status-bar": "~57.0.1",
     "react": "19.2.3",
-    "react-native": "0.86.2"
+    "react-dom": "19.2.3",
+    "react-native": "0.86.2",
+    "react-native-safe-area-context": "~5.7.0",
+    "react-native-svg": "15.15.4",
+    "react-native-web": "^0.21.2",
+    "react-native-webview": "13.16.1",
+    "tweetnacl": "^1.0.3"
   },
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "doctor": "npx expo-doctor",
+    "test:parity": "node scripts/run-parity.mjs",
+    "typecheck": "tsc -p tsconfig.json",
+    "check": "npx expo-doctor && npm run typecheck && npm run test:parity"
   },
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "sharp": "^0.35.3",
+    "subset-font": "^2.5.0",
+    "typescript": "~6.0.3"
+  }
 }
